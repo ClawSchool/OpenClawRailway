@@ -6,7 +6,7 @@ OpenClaw is a personal AI assistant platform that runs a gateway server on Node.
 
 ## Deploy
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/FebjHR?referralCode=NVdOal&utm_medium=integration&utm_source=template&utm_campaign=generic)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/openclaw-secure?referralCode=NVdOal&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## What's included
 
