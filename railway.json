@@ -1,0 +1,8 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "deploy": {
+    "startCommand": "docker-entrypoint.sh openclaw gateway --allow-unconfigured --bind lan",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 300
+  }
+}

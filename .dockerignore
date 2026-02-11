@@ -1,0 +1,7 @@
+# Ignore everything — we install via the public install script,
+# so only the entrypoint helper needs to be in the build context.
+*
+
+# Whitelist
+!docker-entrypoint.sh
+!railway.json
