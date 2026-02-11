@@ -35,7 +35,7 @@ The template auto-generates `OPENCLAW_GATEWAY_TOKEN` and `OPENCLAW_GATEWAY_PASSW
 2. Go to **Variables**
 3. Copy `OPENCLAW_GATEWAY_TOKEN` or `OPENCLAW_GATEWAY_PASSWORD`
 
-Use the token or password to authenticate when connecting clients to the gateway's WebSocket endpoint.
+Use the token or password to authenticate on the dashboard `/overview` page when connecting to your gateway.
 
 ## Environment variables
 
