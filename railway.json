@@ -1,5 +1,19 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
+  "env": {
+    "ANTHROPIC_API_KEY": {
+      "description": "Your Anthropic API key for Claude (from console.anthropic.com)",
+      "required": true
+    },
+    "OPENCLAW_GATEWAY_TOKEN": {
+      "description": "Auto-generated token for gateway authentication",
+      "default": "${{secret(64)}}"
+    },
+    "OPENCLAW_GATEWAY_PASSWORD": {
+      "description": "Auto-generated password for gateway authentication",
+      "default": "${{secret(32)}}"
+    }
+  },
   "volumes": {
     "/data": {}
   },

@@ -1,6 +1,13 @@
 #!/bin/sh
 set -e
 
+# --- Preflight checks ---
+if [ -z "$ANTHROPIC_API_KEY" ]; then
+  echo "FATAL: ANTHROPIC_API_KEY is not set." >&2
+  echo "Add it in your Railway dashboard under Variables, then redeploy." >&2
+  exit 1
+fi
+
 # Hardcoded paths for Railway persistent volume at /data.
 export OPENCLAW_STATE_DIR="/data/.openclaw"
 export OPENCLAW_WORKSPACE_DIR="/data/workspace"
