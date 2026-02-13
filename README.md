@@ -20,7 +20,7 @@ The container runs as a non-root user with hardened volume permissions, a restri
 
 ## What it looks like
 
-![OpenClaw Gateway Dashboard](assets/dashboard.png)
+![OpenClaw Gateway Dashboard](assets/chat.png)
 
 ## Setup
 
