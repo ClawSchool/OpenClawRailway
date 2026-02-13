@@ -41,6 +41,8 @@ The template auto-generates `OPENCLAW_GATEWAY_TOKEN` and `OPENCLAW_GATEWAY_PASSW
 
 Use the token or password to authenticate on the dashboard `/overview` page when connecting to your gateway.
 
+![Gateway overview page with token and password configured](assets/overview.png)
+
 ## Environment variables
 
 | Variable | Description |
