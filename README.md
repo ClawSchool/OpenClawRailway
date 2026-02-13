@@ -18,6 +18,10 @@ OpenClaw is a personal AI assistant platform that runs a gateway server on Node.
 
 The container runs as a non-root user with hardened volume permissions, a restrictive umask, and binary integrity verification on startup.
 
+## What it looks like
+
+![OpenClaw Gateway Dashboard](assets/dashboard.png)
+
 ## Setup
 
 OpenClaw requires an Anthropic API key to chat with Claude. For an out-of-the-box experience, add it during the template deployment prompt before launch. Otherwise, you can add it after deploying:
