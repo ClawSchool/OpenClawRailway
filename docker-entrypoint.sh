@@ -37,6 +37,14 @@ export OPENCLAW_GATEWAY_PORT="${PORT:-8080}"
 # Seed a minimal config if none exists yet.
 CONFIG_DIR="$OPENCLAW_STATE_DIR"
 CONFIG_FILE="$CONFIG_DIR/openclaw.json"
+
+# Always reset device pairing to force use of environment variables
+if [ -f "$CONFIG_FILE" ]; then
+  echo "Clearing stored device tokens to use environment variables..." >&2
+  # Remove devices section from config to force re-pairing with env vars
+  rm -f "$CONFIG_DIR/.device-tokens" "$CONFIG_DIR/devices.json" 2>/dev/null || true
+fi
+
 if [ ! -f "$CONFIG_FILE" ]; then
   mkdir -p "$CONFIG_DIR"
   cat > "$CONFIG_FILE" <<'CONF'
