@@ -2,8 +2,9 @@
 set -e
 
 # --- Preflight checks ---
-if [ -z "$ANTHROPIC_API_KEY" ]; then
-  echo "FATAL: ANTHROPIC_API_KEY is not set." >&2
+if [ -z "$ANTHROPIC_API_KEY" ] && [ -z "$CLAUDE_AI_SESSION_KEY" ] && [ -z "$CLAUDE_WEB_SESSION_KEY" ]; then
+  echo "FATAL: No authentication configured." >&2
+  echo "Set one of: ANTHROPIC_API_KEY, CLAUDE_AI_SESSION_KEY, or CLAUDE_WEB_SESSION_KEY" >&2
   echo "Add it in your Railway dashboard under Variables, then redeploy." >&2
   exit 1
 fi

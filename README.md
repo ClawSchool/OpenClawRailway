@@ -24,7 +24,22 @@ The container runs as a non-root user with hardened volume permissions, a restri
 
 ## Setup
 
-OpenClaw requires an Anthropic API key to chat with Claude. For an out-of-the-box experience, add it during the template deployment prompt before launch. Otherwise, you can add it after deploying:
+OpenClaw requires Claude authentication to chat with Claude. You can authenticate using either:
+
+### Option 1: Claude Web Session (Recommended)
+
+1. In the Railway dashboard, open your OpenClaw service
+2. Go to **Variables**
+3. Add one of the following:
+   - `CLAUDE_AI_SESSION_KEY` - Your Claude AI session key
+   - `CLAUDE_WEB_SESSION_KEY` and `CLAUDE_WEB_COOKIE` - Your Claude web session credentials
+4. Redeploy the service
+
+To get your Claude session credentials, log into [claude.ai](https://claude.ai) and extract the session key from your browser's developer tools (Application/Storage > Cookies).
+
+### Option 2: Anthropic API Key
+
+Alternatively, you can use an Anthropic API key:
 
 1. In the Railway dashboard, open your OpenClaw service
 2. Go to **Variables**
@@ -47,7 +62,10 @@ Use the token or password to authenticate on the dashboard `/overview` page when
 
 | Variable | Description |
 |---|---|
-| `ANTHROPIC_API_KEY` | **Required.** Your Anthropic API key for Claude |
+| `CLAUDE_AI_SESSION_KEY` | Claude AI session key (recommended authentication method) |
+| `CLAUDE_WEB_SESSION_KEY` | Claude web session key (alternative to CLAUDE_AI_SESSION_KEY) |
+| `CLAUDE_WEB_COOKIE` | Claude web cookie (used with CLAUDE_WEB_SESSION_KEY) |
+| `ANTHROPIC_API_KEY` | Anthropic API key for Claude (alternative authentication method) |
 | `OPENCLAW_GATEWAY_TOKEN` | Auto-generated token for gateway authentication |
 | `OPENCLAW_GATEWAY_PASSWORD` | Auto-generated password for gateway authentication |
 | `PORT` | Automatically set by Railway |

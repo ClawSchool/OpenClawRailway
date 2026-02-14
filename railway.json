@@ -1,9 +1,13 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "env": {
+    "CLAUDE_AI_SESSION_KEY": {
+      "description": "Your Claude session key from claude.ai (extract from browser cookies after logging in)",
+      "required": false
+    },
     "ANTHROPIC_API_KEY": {
-      "description": "Your Anthropic API key for Claude (from console.anthropic.com)",
-      "required": true
+      "description": "Alternative: Your Anthropic API key for Claude (from console.anthropic.com)",
+      "required": false
     },
     "OPENCLAW_GATEWAY_TOKEN": {
       "description": "Auto-generated token for gateway authentication",
