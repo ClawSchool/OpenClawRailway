@@ -16,6 +16,7 @@ RUN if [ -n "$OPENCLAW_DOCKER_APT_PACKAGES" ]; then \
 RUN curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-onboard --no-prompt
 
 ENV NODE_ENV=production
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 
 # Install Go (after OpenClaw so install layer stays cached across Go version bumps)
 ARG GO_VERSION=1.22.5
