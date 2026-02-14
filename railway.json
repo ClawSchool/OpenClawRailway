@@ -22,7 +22,7 @@
     "/data": {}
   },
   "deploy": {
-    "startCommand": "docker-entrypoint.sh openclaw gateway --allow-unconfigured --bind lan",
+    "startCommand": "docker-entrypoint.sh openclaw gateway --allow-unconfigured --bind lan --token $OPENCLAW_GATEWAY_TOKEN --password $OPENCLAW_GATEWAY_PASSWORD",
     "healthcheckPath": "/health",
     "healthcheckTimeout": 300
   }
